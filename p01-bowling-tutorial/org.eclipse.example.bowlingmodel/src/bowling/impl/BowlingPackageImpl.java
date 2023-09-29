@@ -234,7 +234,7 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMatchup_Game() {
+	public EReference getMatchup_Games() {
 		return (EReference)matchupEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -320,7 +320,7 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 		createEAttribute(tournamentEClass, TOURNAMENT__TYPE);
 
 		matchupEClass = createEClass(MATCHUP);
-		createEReference(matchupEClass, MATCHUP__GAME);
+		createEReference(matchupEClass, MATCHUP__GAMES);
 
 		gameEClass = createEClass(GAME);
 		createEReference(gameEClass, GAME__MATCHUP);
@@ -373,10 +373,10 @@ public class BowlingPackageImpl extends EPackageImpl implements BowlingPackage {
 		initEAttribute(getTournament_Type(), this.getTournamentType(), "type", null, 0, 1, Tournament.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(matchupEClass, Matchup.class, "Matchup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMatchup_Game(), this.getGame(), this.getGame_Matchup(), "game", null, 0, 2, Matchup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMatchup_Games(), this.getGame(), this.getGame_Matchup(), "games", null, 2, 2, Matchup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gameEClass, Game.class, "Game", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGame_Matchup(), this.getMatchup(), this.getMatchup_Game(), "matchup", null, 0, 1, Game.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGame_Matchup(), this.getMatchup(), this.getMatchup_Games(), "matchup", null, 0, 1, Game.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGame_Player(), this.getPlayer(), null, "player", null, 0, -1, Game.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

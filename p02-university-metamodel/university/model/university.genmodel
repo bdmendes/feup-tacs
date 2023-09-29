@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/university/src" modelPluginID="university" modelName="University"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="17.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>university.ecore</foreignModel>
+  <genPackages prefix="University" disposableProviderFactory="true" ecorePackage="university.ecore#/">
+    <genClasses ecoreClass="university.ecore#//University"/>
+    <genClasses ecoreClass="university.ecore#//Teacher"/>
+    <genClasses ecoreClass="university.ecore#//Faculty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference university.ecore#//Faculty/university"/>
+    </genClasses>
+    <genClasses ecoreClass="university.ecore#//Course">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference university.ecore#//Course/faculty"/>
+    </genClasses>
+    <genClasses ecoreClass="university.ecore#//CourseUnit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference university.ecore#//CourseUnit/courses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference university.ecore#//CourseUnit/teachers"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

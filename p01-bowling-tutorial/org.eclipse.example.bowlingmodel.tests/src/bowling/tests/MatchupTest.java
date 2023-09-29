@@ -2,7 +2,11 @@
  */
 package bowling.tests;
 
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.util.Diagnostician;
+
 import bowling.BowlingFactory;
+import bowling.Game;
 import bowling.Matchup;
 
 import junit.framework.TestCase;
@@ -10,24 +14,22 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Matchup</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object
+ * '<em><b>Matchup</b></em>'. <!-- end-user-doc -->
  * @generated
  */
 public class MatchupTest extends TestCase {
 
 	/**
 	 * The fixture for this Matchup test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected Matchup fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -36,8 +38,8 @@ public class MatchupTest extends TestCase {
 
 	/**
 	 * Constructs a new Matchup test case with the given name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MatchupTest(String name) {
@@ -46,8 +48,8 @@ public class MatchupTest extends TestCase {
 
 	/**
 	 * Sets the fixture for this Matchup test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected void setFixture(Matchup fixture) {
@@ -56,8 +58,8 @@ public class MatchupTest extends TestCase {
 
 	/**
 	 * Returns the fixture for this Matchup test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected Matchup getFixture() {
@@ -65,8 +67,7 @@ public class MatchupTest extends TestCase {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -76,8 +77,7 @@ public class MatchupTest extends TestCase {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -86,4 +86,18 @@ public class MatchupTest extends TestCase {
 		setFixture(null);
 	}
 
-} //MatchupTest
+	public void testMatchupGameRef() {
+		Matchup matchup = BowlingFactory.eINSTANCE.createMatchup();
+		Game game = BowlingFactory.eINSTANCE.createGame();
+		matchup.getGames().add(game);
+		assertEquals(game.getMatchup(), matchup);
+		assertEquals(game.eContainer(), matchup);
+	}
+
+	public void testValidation() {
+		Matchup matchup = BowlingFactory.eINSTANCE.createMatchup();
+		matchup.getGames().add(BowlingFactory.eINSTANCE.createGame());
+		Diagnostic validate = Diagnostician.INSTANCE.validate(matchup);
+		assertEquals(Diagnostic.ERROR, validate.getSeverity());
+	}
+} // MatchupTest

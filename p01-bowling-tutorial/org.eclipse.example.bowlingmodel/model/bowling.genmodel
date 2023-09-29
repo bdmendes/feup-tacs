@@ -23,7 +23,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bowling.ecore#//Tournament/type"/>
     </genClasses>
     <genClasses ecoreClass="bowling.ecore#//Matchup">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//Matchup/game"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bowling.ecore#//Matchup/games"/>
     </genClasses>
     <genClasses ecoreClass="bowling.ecore#//Game">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference bowling.ecore#//Game/matchup"/>

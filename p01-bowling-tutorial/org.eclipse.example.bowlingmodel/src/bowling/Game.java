@@ -26,14 +26,14 @@ import org.eclipse.emf.ecore.EObject;
 public interface Game extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Matchup</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link bowling.Matchup#getGame <em>Game</em>}'.
+	 * It is bidirectional and its opposite is '{@link bowling.Matchup#getGames <em>Games</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Matchup</em>' container reference.
 	 * @see #setMatchup(Matchup)
 	 * @see bowling.BowlingPackage#getGame_Matchup()
-	 * @see bowling.Matchup#getGame
-	 * @model opposite="game" transient="false"
+	 * @see bowling.Matchup#getGames
+	 * @model opposite="games" transient="false"
 	 * @generated
 	 */
 	Matchup getMatchup();

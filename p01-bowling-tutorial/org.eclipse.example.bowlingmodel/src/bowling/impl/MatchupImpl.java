@@ -28,22 +28,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link bowling.impl.MatchupImpl#getGame <em>Game</em>}</li>
+ *   <li>{@link bowling.impl.MatchupImpl#getGames <em>Games</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup {
 	/**
-	 * The cached value of the '{@link #getGame() <em>Game</em>}' containment reference list.
+	 * The cached value of the '{@link #getGames() <em>Games</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGame()
+	 * @see #getGames()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Game> game;
-
+	protected EList<Game> games;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,11 +68,11 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	 * @generated
 	 */
 	@Override
-	public EList<Game> getGame() {
-		if (game == null) {
-			game = new EObjectContainmentWithInverseEList<Game>(Game.class, this, BowlingPackage.MATCHUP__GAME, BowlingPackage.GAME__MATCHUP);
+	public EList<Game> getGames() {
+		if (games == null) {
+			games = new EObjectContainmentWithInverseEList<Game>(Game.class, this, BowlingPackage.MATCHUP__GAMES, BowlingPackage.GAME__MATCHUP);
 		}
-		return game;
+		return games;
 	}
 
 	/**
@@ -85,8 +84,8 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGame()).basicAdd(otherEnd, msgs);
+			case BowlingPackage.MATCHUP__GAMES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGames()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -99,8 +98,8 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				return ((InternalEList<?>)getGame()).basicRemove(otherEnd, msgs);
+			case BowlingPackage.MATCHUP__GAMES:
+				return ((InternalEList<?>)getGames()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -113,8 +112,8 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				return getGame();
+			case BowlingPackage.MATCHUP__GAMES:
+				return getGames();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,9 +127,9 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				getGame().clear();
-				getGame().addAll((Collection<? extends Game>)newValue);
+			case BowlingPackage.MATCHUP__GAMES:
+				getGames().clear();
+				getGames().addAll((Collection<? extends Game>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -144,8 +143,8 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				getGame().clear();
+			case BowlingPackage.MATCHUP__GAMES:
+				getGames().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -159,8 +158,8 @@ public class MatchupImpl extends MinimalEObjectImpl.Container implements Matchup
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BowlingPackage.MATCHUP__GAME:
-				return game != null && !game.isEmpty();
+			case BowlingPackage.MATCHUP__GAMES:
+				return games != null && !games.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

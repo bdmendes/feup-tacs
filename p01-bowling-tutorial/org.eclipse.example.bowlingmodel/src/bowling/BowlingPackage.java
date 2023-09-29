@@ -207,13 +207,13 @@ public interface BowlingPackage extends EPackage {
 	int MATCHUP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Game</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Games</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHUP__GAME = 0;
+	int MATCHUP__GAMES = 0;
 
 	/**
 	 * The number of structural features of the '<em>Matchup</em>' class.
@@ -397,15 +397,15 @@ public interface BowlingPackage extends EPackage {
 	EClass getMatchup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link bowling.Matchup#getGame <em>Game</em>}'.
+	 * Returns the meta object for the containment reference list '{@link bowling.Matchup#getGames <em>Games</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Game</em>'.
-	 * @see bowling.Matchup#getGame()
+	 * @return the meta object for the containment reference list '<em>Games</em>'.
+	 * @see bowling.Matchup#getGames()
 	 * @see #getMatchup()
 	 * @generated
 	 */
-	EReference getMatchup_Game();
+	EReference getMatchup_Games();
 
 	/**
 	 * Returns the meta object for class '{@link bowling.Game <em>Game</em>}'.
@@ -561,12 +561,12 @@ public interface BowlingPackage extends EPackage {
 		EClass MATCHUP = eINSTANCE.getMatchup();
 
 		/**
-		 * The meta object literal for the '<em><b>Game</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Games</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MATCHUP__GAME = eINSTANCE.getMatchup_Game();
+		EReference MATCHUP__GAMES = eINSTANCE.getMatchup_Games();
 
 		/**
 		 * The meta object literal for the '{@link bowling.impl.GameImpl <em>Game</em>}' class.

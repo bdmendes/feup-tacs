@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link bowling.Matchup#getGame <em>Game</em>}</li>
+ *   <li>{@link bowling.Matchup#getGames <em>Games</em>}</li>
  * </ul>
  *
  * @see bowling.BowlingPackage#getMatchup()
@@ -24,17 +24,17 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Matchup extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Game</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Games</b></em>' containment reference list.
 	 * The list contents are of type {@link bowling.Game}.
 	 * It is bidirectional and its opposite is '{@link bowling.Game#getMatchup <em>Matchup</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Game</em>' containment reference list.
-	 * @see bowling.BowlingPackage#getMatchup_Game()
+	 * @return the value of the '<em>Games</em>' containment reference list.
+	 * @see bowling.BowlingPackage#getMatchup_Games()
 	 * @see bowling.Game#getMatchup
-	 * @model opposite="matchup" containment="true" upper="2"
+	 * @model opposite="matchup" containment="true" lower="2" upper="2"
 	 * @generated
 	 */
-	EList<Game> getGame();
+	EList<Game> getGames();
 
 } // Matchup

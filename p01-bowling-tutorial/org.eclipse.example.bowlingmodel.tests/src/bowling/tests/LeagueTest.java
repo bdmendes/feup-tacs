@@ -3,6 +3,7 @@
 package bowling.tests;
 
 import bowling.BowlingFactory;
+import bowling.BowlingPackage;
 import bowling.League;
 
 import junit.framework.TestCase;
@@ -10,24 +11,22 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>League</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object
+ * '<em><b>League</b></em>'. <!-- end-user-doc -->
  * @generated
  */
 public class LeagueTest extends TestCase {
 
 	/**
 	 * The fixture for this League test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected League fixture = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -36,8 +35,8 @@ public class LeagueTest extends TestCase {
 
 	/**
 	 * Constructs a new League test case with the given name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+	 * --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public LeagueTest(String name) {
@@ -46,8 +45,8 @@ public class LeagueTest extends TestCase {
 
 	/**
 	 * Sets the fixture for this League test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected void setFixture(League fixture) {
@@ -56,8 +55,8 @@ public class LeagueTest extends TestCase {
 
 	/**
 	 * Returns the fixture for this League test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	protected League getFixture() {
@@ -65,8 +64,7 @@ public class LeagueTest extends TestCase {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -76,8 +74,7 @@ public class LeagueTest extends TestCase {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */
@@ -86,4 +83,10 @@ public class LeagueTest extends TestCase {
 		setFixture(null);
 	}
 
-} //LeagueTest
+	public void testReflectiveInformation() {
+		League league = BowlingFactory.eINSTANCE.createLeague();
+		assertTrue(league.eClass().getEAllReferences().get(0).isMany());
+		assertTrue(BowlingPackage.eINSTANCE.getLeague_Players().isMany());
+	}
+
+} // LeagueTest

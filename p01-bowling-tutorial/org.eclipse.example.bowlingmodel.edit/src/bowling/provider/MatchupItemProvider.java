@@ -77,7 +77,7 @@ public class MatchupItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BowlingPackage.Literals.MATCHUP__GAME);
+			childrenFeatures.add(BowlingPackage.Literals.MATCHUP__GAMES);
 		}
 		return childrenFeatures;
 	}
@@ -130,7 +130,7 @@ public class MatchupItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Matchup.class)) {
-			case BowlingPackage.MATCHUP__GAME:
+			case BowlingPackage.MATCHUP__GAMES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,7 +150,7 @@ public class MatchupItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(BowlingPackage.Literals.MATCHUP__GAME,
+				(BowlingPackage.Literals.MATCHUP__GAMES,
 				 BowlingFactory.eINSTANCE.createGame()));
 	}
 

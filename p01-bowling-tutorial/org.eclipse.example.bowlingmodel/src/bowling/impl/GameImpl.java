@@ -102,7 +102,7 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMatchup != null)
-				msgs = ((InternalEObject)newMatchup).eInverseAdd(this, BowlingPackage.MATCHUP__GAME, Matchup.class, msgs);
+				msgs = ((InternalEObject)newMatchup).eInverseAdd(this, BowlingPackage.MATCHUP__GAMES, Matchup.class, msgs);
 			msgs = basicSetMatchup(newMatchup, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -162,7 +162,7 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case BowlingPackage.GAME__MATCHUP:
-				return eInternalContainer().eInverseRemove(this, BowlingPackage.MATCHUP__GAME, Matchup.class, msgs);
+				return eInternalContainer().eInverseRemove(this, BowlingPackage.MATCHUP__GAMES, Matchup.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
